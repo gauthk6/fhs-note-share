@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremont High School Note-Share</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #e3f2fd;
+            --accent-color: #ffd54f;
+            --text-color: #333333;
+            --background-color: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 4rem 0;
+            border-radius: 0 0 50px 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        .search-bar {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.25);
+        }
+
+        .popular-classes {
+            margin: 3rem 0;
+        }
+
+        .popular-classes h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .class-card {
+            background: var(--secondary-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .class-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .class-card p {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .subjects {
+            margin: 3rem 0;
+        }
+
+        .subject h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .upload-section {
+            background-color: var(--accent-color);
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 50px;
+            margin: 3rem 0;
+        }
+
+        .upload-section h2 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-radius: 50px 50px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FHS Note-Share</div>
+                <ul>
+                    <li><a href="#popular">Popular Classes</a></li>
+                    <li><a href="#subjects">All Subjects</a></li>
+                    <li><a href="#upload">Upload Notes</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Fremont High School Note-Share</h1>
+            <p>Collaborate, share, and excel together. Access and contribute to a growing collection of student-created notes for all subjects and courses.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for notes by subject, course, or topic...">
+        </div>
+
+        <section id="popular" class="popular-classes">
+            <h2>Popular Classes</h2>
+            <div class="class-grid">
+                <div class="class-card">
+                    <h3>AP Calculus BC</h3>
+                    <p>Advanced calculus concepts and problem-solving</p>
+                </div>
+                <div class="class-card">
+                    <h3>AP Physics C</h3>
+                    <p>Mechanics, electricity, and magnetism</p>
+                </div>
+                <div class="class-card">
+                    <h3>AP English Literature</h3>
+                    <p>Analysis of literary works and composition</p>
+                </div>
+                <div class="class-card">
+                    <h3>AP US History</h3>
+                    <p>Comprehensive study of American history</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="subjects" class="subjects">
+            <h2>All Subjects</h2>
+            <!-- Subject content here (you can keep the previous subject structure) -->
+        </section>
+
+        <section id="upload" class="upload-section">
+            <h2>Share Your Knowledge</h2>
+            <p>Help your fellow students by uploading your notes. Together, we can create a valuable resource for everyone at Fremont High.</p>
+            <p>To submit your notes, email them to: <strong>notes@fremonthigh.edu</strong></p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Fremont High School Note-Share - Created by students, for students</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add basic search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                alert(`You searched for: ${this.value}`);
+                // In a real application, this would trigger a search function
+            }
+        });
+    </script>
+</body>
+</html>
